@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
         } else if(body.error) {
             callback('Unable to find coordinates', undefined)
         } else {
-            callback(undefined, body.current.weather_descriptions[0] +'. It is '+body.current.temperature + ' degrees but it feels '+ body.current.feelslike + ' degrees out.');
+            callback(undefined, body.current.weather_descriptions[0] +'. It is '+body.current.temperature + ' degrees but it feels '+ body.current.feelslike + ' degrees out.\n The windspeed is ' + body.current.wind_speed + ' and its humidity is ' + body.current.humidity);
         }
 
     })
