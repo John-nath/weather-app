@@ -5,7 +5,7 @@ const hbs = require('hbs');
 const geocode = require('./utils/geoCode.js')
 const forecast = require('./utils/forecast.js');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 
 const app = express();
 
@@ -38,7 +38,7 @@ app.get('', (req,res) => {
     res.render('index', {
         title: 'Weather app',
         name: 'Adikwu John'
-    });                 
+    })       
 })
 
 app.get('/about', (req, res) => {
